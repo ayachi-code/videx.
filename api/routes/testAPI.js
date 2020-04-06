@@ -1,8 +1,10 @@
 var express = require("express");
 var router = express.Router();
 
+//let mensen = ["Bilal","Henk"]
+
 router.get("/", function(req, res, next) {
-    res.send("API tester 11");
+    res.send("hey");
 });
 
 module.exports = router;
