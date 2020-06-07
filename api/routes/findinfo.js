@@ -15,13 +15,11 @@ router.get("/:info", function(req, res, next) {
         release_date: []
     }  
     
-
-    movie_info.name.push(data.results[0].original_title)
-    movie_info.language.push(data.results[0].original_language)      
-    movie_info.vote_average.push(data.results[0].vote_average)      
+    movie_info.name.push("Title: " + data.results[0].original_title)
+    movie_info.language.push("Language: " + data.results[0].original_language)      
+    movie_info.vote_average.push("Vote average " + data.results[0].vote_average)      
     movie_info.overview.push(data.results[0].overview)      
-    movie_info.release_date.push(data.results[0].release_date)              
-
+    movie_info.release_date.push("Release date: " + data.results[0].release_date)              
 
     //Sent data to client...
     res.send(movie_info)
